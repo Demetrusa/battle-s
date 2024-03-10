@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px); /* Each cell is 60px */
+    grid-template-rows: repeat(5, 60px);
+    gap: 2px; /* Gap between each cell */
+    border: 2px solid black;
+    width: 302px; /* 5 cells of 60px each and 2px border */
+    height: 302px;
+}
+
+.cell {
+    background-color: lightblue;
+    border: 1px solid gray;
+}
+
+.cell:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+.ship {
+    background-color: yellow;
+}
