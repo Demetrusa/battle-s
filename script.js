@@ -12,18 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Place ships with proper spacing
+    placeShips(board);
+
     // Handle click event for each cell
     const cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('click', () => {
-            // Handle click event for the cell
-            // You can implement game logic here
-            cell.style.backgroundColor = "red"; // For example, change color on click
+            if (cell.classList.contains('ship')) {
+                cell.style.backgroundColor = "green"; // Ship is located, change color to green
+            } else {
+                cell.style.backgroundColor = "red"; // No ship, change color to red
+            }
         });
     });
-
-    // Place ships with proper spacing
-    placeShips(board);
 });
 
 function placeShips(board) {
